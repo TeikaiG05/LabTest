@@ -51,7 +51,7 @@ namespace LabTest
         // Xử lý nút "Tính tiền"
         private async void btnPay_Click(object sender, EventArgs e)
         {
-            string tableId = textBox1.Text.Trim();
+            string tableId = soban.Text.Trim();
             if (string.IsNullOrEmpty(tableId)) return;
 
             try

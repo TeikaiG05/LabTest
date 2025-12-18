@@ -70,10 +70,25 @@ namespace LabTest
             }
         }
 
-        private void butmenu_Click(object sender, EventArgs e)
+        private void butthoat_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (tcpClient != null)
+                {
+                    tcpClient.Close();
+                    tcpClient = null;
+                }
+                MessageBox.Show("QUIT");
+                butketnot.Enabled = true;
+                butthoat.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("QUIT error: " + ex.Message);
+            }
         }
+
     }
 }
     
