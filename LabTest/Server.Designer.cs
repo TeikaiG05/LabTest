@@ -34,9 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.ltlPort = new System.Windows.Forms.Label();
-            this.numPort = new System.Windows.Forms.NumericUpDown();
             this.lblStatus = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numPort)).BeginInit();
+            this.txtPort = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnStart
@@ -48,9 +47,11 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.Location = new System.Drawing.Point(32, 140);
             this.btnStop.Name = "btnStop";
@@ -58,6 +59,7 @@
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "STOP";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // rtbLog
             // 
@@ -84,7 +86,6 @@
             // 
             this.txtIP.Location = new System.Drawing.Point(65, 29);
             this.txtIP.Name = "txtIP";
-            this.txtIP.ReadOnly = true;
             this.txtIP.Size = new System.Drawing.Size(264, 20);
             this.txtIP.TabIndex = 4;
             this.txtIP.TabStop = false;
@@ -99,28 +100,6 @@
             this.ltlPort.TabIndex = 5;
             this.ltlPort.Text = "Port:";
             // 
-            // numPort
-            // 
-            this.numPort.Location = new System.Drawing.Point(398, 29);
-            this.numPort.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.numPort.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numPort.Name = "numPort";
-            this.numPort.Size = new System.Drawing.Size(120, 20);
-            this.numPort.TabIndex = 7;
-            this.numPort.Value = new decimal(new int[] {
-            8080,
-            0,
-            0,
-            0});
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -132,13 +111,22 @@
             this.lblStatus.TabIndex = 8;
             this.lblStatus.Text = "Status...";
             // 
+            // txtPort
+            // 
+            this.txtPort.Location = new System.Drawing.Point(398, 29);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(75, 20);
+            this.txtPort.TabIndex = 9;
+            this.txtPort.TabStop = false;
+            this.txtPort.Text = "8080";
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 591);
+            this.Controls.Add(this.txtPort);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.numPort);
             this.Controls.Add(this.ltlPort);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.label1);
@@ -147,7 +135,7 @@
             this.Controls.Add(this.btnStart);
             this.Name = "Server";
             this.Text = "Server";
-            ((System.ComponentModel.ISupportInitialize)(this.numPort)).EndInit();
+            this.Load += new System.EventHandler(this.Server_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +149,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Label ltlPort;
-        private System.Windows.Forms.NumericUpDown numPort;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.TextBox txtPort;
     }
 }
