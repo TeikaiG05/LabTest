@@ -69,6 +69,7 @@
             this.butketnot.TabIndex = 2;
             this.butketnot.Text = "Kết nối";
             this.butketnot.UseVisualStyleBackColor = true;
+            this.butketnot.Click += new System.EventHandler(this.butketnot_Click);
             // 
             // butmenu
             // 
@@ -78,6 +79,7 @@
             this.butmenu.TabIndex = 3;
             this.butmenu.Text = "MENU!";
             this.butmenu.UseVisualStyleBackColor = true;
+            this.butmenu.Click += new System.EventHandler(this.butmenu_Click);
             // 
             // dataGridView1
             // 
@@ -153,6 +155,7 @@
             this.butdatmon.TabIndex = 12;
             this.butdatmon.Text = "Đặt";
             this.butdatmon.UseVisualStyleBackColor = true;
+            this.butdatmon.Click += new System.EventHandler(this.butdatmon_Click);
             // 
             // label4
             // 
