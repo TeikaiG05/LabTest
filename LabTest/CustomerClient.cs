@@ -172,11 +172,11 @@ namespace LabTest
                 }
                 butketnot.Enabled = true;
                 butthoat.Enabled = false;
-                MessageBox.Show("Disconnected");
+                MessageBox.Show("QUIT");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Disconnect error: " + ex.Message);
+                MessageBox.Show("QUIT error: " + ex.Message);
             }
         }
     }
