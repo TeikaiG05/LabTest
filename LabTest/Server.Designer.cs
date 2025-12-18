@@ -28,48 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.ltlPort = new System.Windows.Forms.Label();
-            this.txtNumPort = new System.Windows.Forms.TextBox();
+            this.numPort = new System.Windows.Forms.NumericUpDown();
+            this.lblStatus = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numPort)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnStart
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "START";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(32, 73);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(145, 52);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnStop
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(32, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "STOP";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnStop.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStop.Location = new System.Drawing.Point(32, 140);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(145, 52);
+            this.btnStop.TabIndex = 1;
+            this.btnStop.Text = "STOP";
+            this.btnStop.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // rtbLog
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(183, 73);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(935, 466);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtbLog.Location = new System.Drawing.Point(183, 73);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal;
+            this.rtbLog.Size = new System.Drawing.Size(815, 466);
+            this.rtbLog.TabIndex = 2;
+            this.rtbLog.Text = "";
+            this.rtbLog.WordWrap = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 24);
+            this.label1.Location = new System.Drawing.Point(28, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 3;
@@ -77,42 +82,72 @@
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(110, 24);
+            this.txtIP.Location = new System.Drawing.Point(65, 29);
             this.txtIP.Name = "txtIP";
+            this.txtIP.ReadOnly = true;
             this.txtIP.Size = new System.Drawing.Size(264, 20);
             this.txtIP.TabIndex = 4;
+            this.txtIP.TabStop = false;
             // 
             // ltlPort
             // 
             this.ltlPort.AutoSize = true;
             this.ltlPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ltlPort.Location = new System.Drawing.Point(399, 24);
+            this.ltlPort.Location = new System.Drawing.Point(345, 29);
             this.ltlPort.Name = "ltlPort";
             this.ltlPort.Size = new System.Drawing.Size(47, 20);
             this.ltlPort.TabIndex = 5;
             this.ltlPort.Text = "Port:";
             // 
-            // txtNumPort
+            // numPort
             // 
-            this.txtNumPort.Location = new System.Drawing.Point(452, 24);
-            this.txtNumPort.Name = "txtNumPort";
-            this.txtNumPort.Size = new System.Drawing.Size(104, 20);
-            this.txtNumPort.TabIndex = 6;
+            this.numPort.Location = new System.Drawing.Point(398, 29);
+            this.numPort.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.numPort.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPort.Name = "numPort";
+            this.numPort.Size = new System.Drawing.Size(120, 20);
+            this.numPort.TabIndex = 7;
+            this.numPort.Value = new decimal(new int[] {
+            8080,
+            0,
+            0,
+            0});
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblStatus.Location = new System.Drawing.Point(179, 552);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(77, 20);
+            this.lblStatus.TabIndex = 8;
+            this.lblStatus.Text = "Status...";
             // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 617);
-            this.Controls.Add(this.txtNumPort);
+            this.ClientSize = new System.Drawing.Size(1032, 591);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.numPort);
             this.Controls.Add(this.ltlPort);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rtbLog);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
             this.Name = "Server";
             this.Text = "Server";
+            ((System.ComponentModel.ISupportInitialize)(this.numPort)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,12 +155,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Label ltlPort;
-        private System.Windows.Forms.TextBox txtNumPort;
+        private System.Windows.Forms.NumericUpDown numPort;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
