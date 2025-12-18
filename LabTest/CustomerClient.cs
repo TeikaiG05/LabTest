@@ -19,10 +19,10 @@ namespace LabTest
         {
             InitializeComponent();
 
-            btnConnect.Click += btnConnect_Click;
-            btnMenu.Click += btnMenu_Click;
-            btnDat.Click += btnDat_Click;
-            btnThoat.Click += btnThoat_Click;
+            //btnConnect.Click += btnConnect_Click;
+            //btnMenu.Click += btnMenu_Click;
+            //btnDat.Click += btnDat_Click;
+            //btnThoat.Click += btnThoat_Click;
 
             cboMon.SelectedIndexChanged += cboMon_SelectedIndexChanged;
             this.FormClosing += CustomerClient_FormClosing;

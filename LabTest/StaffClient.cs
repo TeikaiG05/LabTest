@@ -12,14 +12,14 @@ namespace LabTest
         private StreamReader reader;
         private StreamWriter writer;
 
-        private const string DEFAULT_HOST = "127.0.0.1";
+        private const string DEFAULT_HOST = "192.168.219.96";
         private const int DEFAULT_PORT = 8080;
 
         public StaffClient()
         {
             InitializeComponent();
 
-            btnTinhTien.Click += btnTinhTien_Click;
+            //btnTinhTien.Click += btnTinhTien_Click;
             this.Load += StaffClient_Load;
             this.FormClosing += StaffClient_FormClosing;
         }
