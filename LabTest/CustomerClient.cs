@@ -39,11 +39,7 @@ namespace LabTest
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if (IsConnected())
-            {
-                Disconnect();
-                return;
-            }
+            
 
             string host = txtIP.Text.Trim();
             if (!int.TryParse(txtPort.Text.Trim(), out int port) || port < 1 || port > 65535)
