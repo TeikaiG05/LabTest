@@ -16,5 +16,23 @@ namespace LabTest
         {
             InitializeComponent();
         }
+
+        private void Server_Click(object sender, EventArgs e)
+        {
+            Server server = new Server();
+            server.Show();
+        }
+
+        private void CustomerClient_Click(object sender, EventArgs e)
+        {
+            CustomerClient client = new CustomerClient();
+            client.Show();
+        }
+
+        private void StaffClient_Click(object sender, EventArgs e)
+        {
+            StaffClient staff = new StaffClient();
+            staff.Show();
+        }
     }
 }
