@@ -72,6 +72,9 @@
     <Compile Include="StaffClient.Designer.cs">
       <DependentUpon>StaffClient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerClient.resx">
+      <DependentUpon>CustomerClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
