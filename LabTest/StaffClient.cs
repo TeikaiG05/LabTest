@@ -30,7 +30,7 @@ namespace LabTest
             orderTable.Columns.Add("Tên món");
             orderTable.Columns.Add("Số lượng");
             orderTable.Columns.Add("Thành tiền");
-            dgvOrders.DataSource = orderTable;
+            dataGridView1.DataSource = orderTable;
         }
 
         private void ConnectToServer()
@@ -51,7 +51,7 @@ namespace LabTest
         // Xử lý nút "Tính tiền"
         private async void btnPay_Click(object sender, EventArgs e)
         {
-            string tableId = txtTableId.Text.Trim();
+            string tableId = textBox1.Text.Trim();
             if (string.IsNullOrEmpty(tableId)) return;
 
             try
@@ -61,7 +61,7 @@ namespace LabTest
 
                 // 2. Nhận phản hồi tổng tiền từ Server
                 string response = await reader.ReadLineAsync();
-                lblTotalAmount.Text = $"Tổng tiền: {response} VNĐ";
+                label2.Text = $"Tổng tiền: {response} VNĐ";
 
                 // 3. Xuất hóa đơn ra file text
                 ExportBill(tableId, response);
@@ -109,6 +109,11 @@ namespace LabTest
         public void AddOrderToGrid(string table, string dish, int qty, double price)
         {
             orderTable.Rows.Add(table, dish, qty, price);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
