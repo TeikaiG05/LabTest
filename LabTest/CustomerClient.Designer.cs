@@ -68,6 +68,7 @@
             this.btnConnect.TabIndex = 2;
             this.btnConnect.Text = "Kết nối";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnMenu
             // 
@@ -77,6 +78,7 @@
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "MENU";
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // txtSoMon
             // 
@@ -135,6 +137,7 @@
             this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDat
             // 
@@ -144,6 +147,7 @@
             this.btnDat.TabIndex = 12;
             this.btnDat.Text = "Đặt";
             this.btnDat.UseVisualStyleBackColor = true;
+            this.btnDat.Click += new System.EventHandler(this.btnDat_Click);
             // 
             // label4
             // 
