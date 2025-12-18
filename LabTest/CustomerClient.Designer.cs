@@ -146,6 +146,7 @@
             this.butthoat.TabIndex = 11;
             this.butthoat.Text = "Thoát!";
             this.butthoat.UseVisualStyleBackColor = true;
+            this.butthoat.Click += new System.EventHandler(this.butthoat_Click);
             // 
             // butdatmon
             // 
