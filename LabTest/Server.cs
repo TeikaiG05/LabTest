@@ -143,7 +143,7 @@ namespace LabTest
                         // MENU
                         if (line.Equals("MENU", StringComparison.OrdinalIgnoreCase))
                         {
-                            var items = menu    .Values.OrderBy(x => x.Id).ToList();
+                            var items = menu.Values.OrderBy(x => x.Id).ToList();
                             writer.WriteLine($"OK {items.Count}");
                             foreach (var m in items)
                                 writer.WriteLine($"{m.Id};{m.Name};{m.Price}");
