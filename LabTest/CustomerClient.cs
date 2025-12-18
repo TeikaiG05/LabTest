@@ -16,5 +16,10 @@ namespace LabTest
         {
             InitializeComponent();
         }
+
+        private void CustomerClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
